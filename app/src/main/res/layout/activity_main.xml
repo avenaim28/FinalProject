@@ -15,4 +15,22 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/Currency"
+        android:layout_width="153dp"
+        android:layout_height="31dp"
+        android:text="Currency Converter"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dropdown"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="36dp" />
+
 </android.support.constraint.ConstraintLayout>
