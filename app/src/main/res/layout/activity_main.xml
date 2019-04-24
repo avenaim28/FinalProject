@@ -6,6 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="122dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dropdown"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="402dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="402dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:text="Converted"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="368dp" />
+
     <TextView
         android:id="@+id/Currency"
         android:layout_width="287dp"
@@ -17,19 +45,38 @@
 
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="184dp"
-        android:layout_height="46dp"
+        android:layout_width="122dp"
+        android:layout_height="45dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:spinnerMode="dropdown"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="122dp" />
+        tools:layout_editor_absoluteX="245dp"
+        tools:layout_editor_absoluteY="139dp" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="184dp"
-        android:layout_height="46dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="235dp" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="627dp" />
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="107dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="139dp" />
 
 </android.support.constraint.ConstraintLayout>
