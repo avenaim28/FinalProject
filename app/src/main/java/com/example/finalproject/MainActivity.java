@@ -9,8 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,40 +20,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*
-         * Set up handlers for each button in our UI. These run when the buttons are clicked.
-         */
-        final ImageButton openFile = findViewById(R.id.openFile);
-        openFile.setOnClickListener(v -> {
-            Log.d(TAG, "Open file button clicked");
-            startOpenFile();
-        });
-        final ImageButton takePhoto = findViewById(R.id.takePhoto);
-        takePhoto.setOnClickListener(v -> {
-            Log.d(TAG, "Take photo button clicked");
-            startTakePhoto();
-        });
-        final ImageButton downloadFile = findViewById(R.id.downloadFile);
-        downloadFile.setOnClickListener(v -> {
-            Log.d(TAG, "Download file button click");
-            startDownloadFile();
-        });
-        final ImageButton rotateLeft = findViewById(R.id.rotateLeft);
-        rotateLeft.setOnClickListener(v -> {
-            Log.d(TAG, "Rotate left button clicked");
-            rotateLeft();
-        });
-        final ImageButton processImage = findViewById(R.id.processImage);
-        processImage.setOnClickListener(v -> {
-            Log.d(TAG, "Process image button clicked");
-            startProcessImage();
-        });
 
-        // We also want to make sure that our progress bar isn't spinning, and style it a bit
-        ProgressBar progressBar = findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.INVISIBLE);
-        progressBar.getIndeterminateDrawable()
-                .setColorFilter(getResources()
-                        .getColor(R.color.colorPrimaryDark, getTheme()), PorterDuff.Mode.SRC_IN);
+        Spinner mySpinner1 = (Spinner) findViewById(R.id.spinner1);
+        ArrayAdapter<String> myAdapter1 = new ArrayAdapter<>(MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
+        myAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner1.setAdapter(myAdapter1);
+
+        Spinner mySpinner2 = (Spinner) findViewById(R.id.spinner2);
+        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<>(MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
+        myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner2.setAdapter(myAdapter2);
     }
 }

@@ -36,11 +36,11 @@
 
     <TextView
         android:id="@+id/Currency"
-        android:layout_width="287dp"
-        android:layout_height="58dp"
-        android:text="Currency Converter"
-        android:textSize="36sp"
-        tools:layout_editor_absoluteX="62dp"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:text="Currency-Converter"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <Spinner
